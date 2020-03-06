@@ -23,20 +23,15 @@ public class ListPerson {
     System.out.println("Nome: ");
     String nome = input.nextLine();
 
-    for (int i = 0; i < nomes.length; i++) {
-      if (nomes[i] == null) {
-        nomes[i] = nome;
-      }
-    }
   }
 
   public void showList() {
-    for (int i = 0; i < nomes.length; i++) {
-      if (isEmpty() == true) {
-        System.out.println("Lista está vazia.");
-      } else {
-        System.out.println(nomes[i]);
+    if (isEmpty() != true) {
+      for (int i = 0; i < nomes.length; i++) {
+        System.out.print("lista" + nomes[i]);
       }
+    } else {
+      System.out.println("A lista está fazia.");
     }
   }
 
