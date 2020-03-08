@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class ListPerson {
 
-  public String nomes[] = new String[4];
-  public Scanner input = new Scanner(System.in);
+  private String nomes[] = new String[4];
+  private Scanner input = new Scanner(System.in);
 
   public int totalElements() {
     return nomes.length;
@@ -11,11 +11,11 @@ public class ListPerson {
 
   public boolean isEmpty() {
     for (int i = 0; i < nomes.length; i++) {
-      if (nomes[i] == null) {
-        return true;
+      if (nomes[i] != null) {
+        return false;
       }
     }
-    return false;
+    return true;
   }
 
   public void addElement() {
@@ -27,6 +27,7 @@ public class ListPerson {
         String nome = input.nextLine();
 
         nomes[i] = nome;
+        break;
       } else {
         System.out.println("A lista está cheia.");
       }
@@ -34,24 +35,69 @@ public class ListPerson {
 
   }
 
+  public void remove() {
+    System.out.println("metodo remover.");
+  }
+
   public void showList() {
-    if (isEmpty() != true) {
+
+    System.out.println("\n");
+    System.out.println("Lista de elementos\n");
+    if (!isEmpty()) {
       for (int i = 0; i < nomes.length; i++) {
         System.out.println(nomes[i]);
       }
     } else {
-      System.out.println("A lista está fazia.");
+      System.out.println("Não há elementos na lista.");
     }
+
   }
 
   public static void main(String[] args) {
+
     ListPerson person = new ListPerson();
-    System.out.println("A lista está vazia " + person.isEmpty());
-    System.out.println("tamanho da lista: " + person.totalElements());
 
-    person.addElement();
+    Scanner input = new Scanner(System.in);
+    int opcao = 0;
 
-    person.showList();
-    System.out.println("\nA lista está vazia: " + person.isEmpty());
+    System.out.println("\n");
+    System.out.println("-----------------------------------------------------");
+    System.out.println("Fila de nomes\n");
+    System.out.println("5 - Finalizar o programa");
+    System.out.println("1 - Adicionar");
+    System.out.println("2 - Remover");
+    System.out.println("3 - Visualizar os elementos da fila.");
+    System.out.println("-----------------------------------------------------");
+    System.out.println("\n");
+
+    while (opcao != 5) {
+      System.out.print("Digite uma opção: ");
+      opcao = input.nextInt();
+      System.out.println("\n");
+
+      switch (opcao) {
+        case 1:
+          opcao = 0;
+          System.out.println("------------");
+          person.addElement();
+          System.out.println("------------");
+          break;
+
+        case 2:
+          opcao = 0;
+          System.out.println("------------");
+          person.remove();
+          System.out.println("------------");
+          break;
+
+        case 3:
+          opcao = 0;
+          System.out.println("------------");
+          person.showList();
+          System.out.println("------------");
+          break;
+      }
+    }
+
   }
 }
