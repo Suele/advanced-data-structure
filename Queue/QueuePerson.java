@@ -29,7 +29,7 @@ public class QueuePerson {
         nomes[i] = nome;
         break;
       } else {
-        System.out.println("A lista está cheia.");
+        System.out.println("A fila está cheia.");
       }
     }
 
@@ -54,13 +54,13 @@ public class QueuePerson {
   public void showList() {
 
     System.out.println("\n");
-    System.out.println("Lista de elementos\n");
+    System.out.println("Elementos na fila\n");
     if (!isEmpty()) {
       for (int i = 0; i < nomes.length; i++) {
         System.out.println(nomes[i]);
       }
     } else {
-      System.out.println("Não há elementos na lista.");
+      System.out.println("Não há elementos na fila.");
     }
 
   }
