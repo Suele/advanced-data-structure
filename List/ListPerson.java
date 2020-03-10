@@ -36,7 +36,19 @@ public class ListPerson {
   }
 
   public void remove() {
-    System.out.println("metodo remover.");
+
+    if (!isEmpty()) {
+      nomes[0] = null;
+      showList();
+
+      for (int i = 0; i < nomes.length; i++) {
+        if (nomes[i] != null) {
+          nomes[i - 1] = nomes[i];
+          nomes[i] = null;
+        }
+      }
+      showList();
+    }
   }
 
   public void showList() {
