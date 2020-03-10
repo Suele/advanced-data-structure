@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ListPerson {
+public class QueuePerson {
 
   private String nomes[] = new String[4];
   private Scanner input = new Scanner(System.in);
@@ -67,7 +67,7 @@ public class ListPerson {
 
   public static void main(String[] args) {
 
-    ListPerson person = new ListPerson();
+    QueuePerson person = new QueuePerson();
 
     Scanner input = new Scanner(System.in);
     int opcao = 0;
