@@ -15,8 +15,10 @@ class Controller:
             print("Data inválida")
 
     def datasIguais(self, date1, date2):
-        print(date1.day)
-        print(date2.day)
+        if date1.day == date2.day or date1.month == date2.month or date1.year == date2.year:
+            print("As datas são iguais")
+        else:
+            print("As datas não são iguais")
 
     def dataDaPascoa(self):
         if self.date.year >= 1582 or self.date.year >= 1699:
