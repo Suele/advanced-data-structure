@@ -9,13 +9,13 @@ class Controller:
             print("Não é um ano Bissexto", self.date.year)
 
     def verificaData(self):
-        if self.date.day >= 1 or self.date.day <= 31 or self.date.month >= 1 or self.date.month <= 12 or self.date.year > 1970:
+        if (self.date.day >= 1 and self.date.day <= 31) and (self.date.month >= 1 and self.date.month <= 12) and (self.date.year > 1970):
             print("Data é valida:", self.date.day, "/", self.date.month, "/", self.date.year)
         else:
             print("Data inválida")
 
     def datasIguais(self, date1, date2):
-        if date1.day == date2.day or date1.month == date2.month or date1.year == date2.year:
+        if date1.day == date2.day and date1.month == date2.month and date1.year == date2.year:
             print("As datas são iguais")
         else:
             print("As datas não são iguais")
