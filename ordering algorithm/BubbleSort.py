@@ -12,8 +12,8 @@ class BubbleSort:
                     aux = self.listNumbers[i + 1]
                     self.listNumbers[i + 1] = self.listNumbers[i]
                     self.listNumbers[i] = aux
+                    print(">>>", self.listNumbers)
                     self.count += 1
-
         return self.listNumbers
 
     def counter(self):
