@@ -1,9 +1,10 @@
-from BubbleSort import BubbleSort
+from AlgorithmSort import AlgorithmSort
 
-list1 = [10,9, 7, 4, 6, 3, 8, 1]
-list2 = [4, 2, 3, 4]
+list1 = [10,9, 7, 4, 6, 3, 8, 1, 5, 2]
+list2 = [1, 2, 3, 4, 5, 6, 10, 9, 8, 7]
 
-bubbleSort = BubbleSort(list1)
-print("Lista sem ordenar: ", list1)
-print("lista ordenada: ", bubbleSort.sort())
-print("contador: ", bubbleSort.counter())
+algorithmSort = AlgorithmSort(list2)
+print("Lista sem ordenar: ", list2)
+print("lista ordenada bubbleSort: ", algorithmSort.bubbleSort())
+print("contador bubbleSort: ", algorithmSort.counter())
+

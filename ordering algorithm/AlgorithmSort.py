@@ -1,10 +1,12 @@
-class BubbleSort:
+class AlgorithmSort:
 
     def __init__(self, listNumbers):
         self.listNumbers = listNumbers
         self.count = 0
+        self.inicio = 0
+        self.fim = None
 
-    def sort(self):
+    def bubbleSort(self):
         n = len(self.listNumbers)
         for j in range(n - 1):
             for i in range(n - 1):
